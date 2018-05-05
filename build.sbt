@@ -19,7 +19,15 @@ libraryDependencies ++= Seq(
     "org.scalatra" %% "scalatra-json" % ScalatraVersion,
     "org.json4s" %% "json4s-jackson" % "3.5.2",
     "com.typesafe.slick" %% "slick" % "3.2.3",
-    "org.xerial" % "sqlite-jdbc" % "3.21.0"
+    "org.xerial" % "sqlite-jdbc" % "3.21.0",
+    "com.typesafe.akka" %% "akka-actor" % "2.5.3",
+    "net.databinder.dispatch" %% "dispatch-core" % "0.13.1",
+    "com.h2database" % "h2" % "1.4.197"
+)
+
+javaOptions ++= Seq(
+    "-Xdebug",
+    "-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005"
 )
 
 enablePlugins(SbtTwirl)
